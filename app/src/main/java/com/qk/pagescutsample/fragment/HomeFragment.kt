@@ -82,8 +82,9 @@ class HomeFragment : Fragment() {
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     detailFragment.sharedElementEnterTransition = DetailTransition()
-                    detailFragment.enterTransition = Fade()
                     detailFragment.sharedElementReturnTransition = DetailTransition()
+                    detailFragment.enterTransition = Fade()
+                    //detailFragment.exitTransition = Fade()
                 }
 
                 ViewCompat.setTransitionName(v, "share_view3")

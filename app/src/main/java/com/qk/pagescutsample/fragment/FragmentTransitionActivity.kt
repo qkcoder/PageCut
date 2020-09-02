@@ -38,15 +38,11 @@ class FragmentTransitionActivity : AppCompatActivity() {
     private fun goHomePage() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         val homeFragment = HomeFragment.getInstance()
-        fragmentTransaction.add(
+        fragmentTransaction.replace(
             R.id.fl_fragment_container,
             homeFragment,
             "home_fragment"
-        ).add(
-            R.id.fl_fragment_container,
-            DetailFragment.getInstance(),
-            "detail_fragment"
-        ).show(homeFragment).commitAllowingStateLoss()
+        ).commitAllowingStateLoss()
     }
 
 }

@@ -1,6 +1,10 @@
-#PagesCut
+# PageCut
 
-一个Android页面切换技术方案
+Technical solutions for page transitions
+
+Android页面转场技术方案
+
+
 
 
 
