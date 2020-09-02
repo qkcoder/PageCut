@@ -1,0 +1,3 @@
+include ':minipage'
+include ':app'
+rootProject.name = "PagesCut"

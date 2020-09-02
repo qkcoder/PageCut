@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.compileSdk
+    defaultConfig {
+        applicationId "com.qk.pagescutsample"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    testImplementation deps.junit
+    androidTestImplementation deps.extJunit
+    androidTestImplementation deps.espresso
+
+    annotationProcessor thirdLib.glideCompiler
+
+    implementation deps.kotlinStdLib
+    implementation deps.ktx
+    implementation deps.appcompat
+    implementation deps.constraintLayout
+    implementation deps.recyclerview
+    implementation deps.navigationFragmentKtx
+    implementation deps.navigationUiKtx
+
+    implementation thirdLib.immersionbar
+    implementation thirdLib.immersionbarktx
+    implementation thirdLib.fastAdapter
+    //implementation thirdLib.fresco
+    implementation thirdLib.glide
+
+
+    implementation project(':minipage')
+}

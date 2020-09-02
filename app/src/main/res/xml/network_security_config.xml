@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">image.iltaw.com</domain>
+        <domain includeSubdomains="true">n.sinaimg.cn</domain>
+        <domain includeSubdomains="true">img.ewebweb.com</domain>
+    </domain-config>
+</network-security-config>
